@@ -12,7 +12,11 @@ def print_board(board):
         print() # stops grid from lining up in a single line
 
 def quit_game():
-    pass
+    """
+    Allow user to quit the game early when they want to
+    stop playing the game
+    """
+    return True if user_choice = "q" else False 
 
 def user_choice():
     pass
