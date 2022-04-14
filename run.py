@@ -2,6 +2,7 @@
 
 board = [["-" for r in range(3)] for c in range(3)]
 
+
 def print_board(board):
     """
     Makes the board for the game
@@ -11,38 +12,49 @@ def print_board(board):
             print(f"{slot} ", end="")
         print() # stops grid from lining up in a single line
 
+
 print_board(board)
+
 
 def quit_game(user_choice):
     """
     Allow user to quit the game early when they want to
     stop playing the game
     """
-    return True if user_choice.lower() == "q" else False 
+    return True if user_choice.lower() == "q" else False
+
 
 def user_choice():
     pass
 
+
 def validate_input():
     pass
+
 
 def coordinates():
     pass
 
+
 def show_on_board():
     pass
+
 
 def player():
     pass
 
+
 def win():
     pass
+
 
 def check_row():
     pass
 
+
 def check_column():
     pass
+
 
 def check_diagonal():
     pass
