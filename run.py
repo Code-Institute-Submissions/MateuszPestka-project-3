@@ -24,8 +24,17 @@ def quit_game(user_choice):
     return True if user_choice.lower() == "q" else False
 
 
-def validate_input():
-    pass
+def validate_input(user_choice):
+    """
+    Checks if users choice is valid,
+    user choice can only be a number between 1-9
+    """
+    try:
+        if not user_choice.isnumeric():
+            raise ValueError("Please input a number between 1-9")
+    except ValueError as e:
+        print(f"Invalid input {e}. Try Again!")
+        return False
 
 
 def coordinates():
@@ -61,3 +70,4 @@ while True:
     if quit_game(user_choice):
         print("Thanks for playing")
         break
+    validate_input(user_choice)
