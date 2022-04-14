@@ -11,4 +11,36 @@ def print_board(board):
             print(f"{slot} ", end="")
         print() # stops grid from lining up in a single line
 
+def quit_game():
+    pass
+
+def user_choice():
+    pass
+
+def validate_input():
+    pass
+
+def coordinates():
+    pass
+
+def show_on_board():
+    pass
+
+def player():
+    pass
+
+def win():
+    pass
+
+def check_row():
+    pass
+
+def check_column():
+    pass
+
+def check_diagonal():
+    pass
+
+
+
 print_board(board)
