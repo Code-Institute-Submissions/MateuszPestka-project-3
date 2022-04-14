@@ -10,7 +10,7 @@ def print_board(board):
     for row in board:
         for slot in row:
             print(f"{slot} ", end="")
-        print() # stops grid from lining up in a single line
+        print()  # stops grid from lining up in a single line
 
 
 print_board(board)
@@ -22,10 +22,6 @@ def quit_game(user_choice):
     stop playing the game
     """
     return True if user_choice.lower() == "q" else False
-
-
-def user_choice():
-    pass
 
 
 def validate_input():
