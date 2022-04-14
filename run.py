@@ -1,3 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# Tic Tac Toe game
+
+board = [["-" for r in range(3)] for c in range(3)]
+
+print(board)
