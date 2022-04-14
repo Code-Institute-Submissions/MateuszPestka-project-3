@@ -18,7 +18,7 @@ def quit_game(user_choice):
     Allow user to quit the game early when they want to
     stop playing the game
     """
-    return True if user_choice == "q" else False 
+    return True if user_choice.lower() == "q" else False 
 
 def user_choice():
     pass
@@ -49,7 +49,7 @@ def check_diagonal():
 
 
 while True:
-    user_choice = input("Enter a position between 1-9 or press 'q' to quit: ")
+    user_choice = input("Enter a position between 1-9 or press 'q' to quit:")
     if quit_game(user_choice):
         print("Thanks for playing")
         break
