@@ -38,6 +38,16 @@ def validate_input(user_choice):
     return True
 
 
+def taken(coords, grid):
+    row = coords[0]
+    column = coords[1]
+    if grid[row][column] != "-":
+        print("Sorry this position is already taken try again")
+        return True
+    else:
+        return False
+
+
 def coordinates(user_choice):
     """
     Changes the users choice into coordinates
@@ -48,6 +58,7 @@ def coordinates(user_choice):
     column = user_choice
     if column > 2:
         column = int(column % 3)
+    return (row, column)
 
 
 def show_on_board():
