@@ -13,9 +13,6 @@ def print_board(board):
         print()  # stops grid from lining up in a single line
 
 
-print_board(board)
-
-
 def quit_game(user_choice):
     """
     Allow user to quit the game early when they want to
@@ -30,18 +27,27 @@ def validate_input(user_choice):
     user choice can only be a number between 1-9
     """
     try:
-        if not user_choice.isnumeric():
+        if not user_choice.isnumeric():  # Checks if user input a number
             raise ValueError("You have entered a letter")
 
-        if int(user_choice) > 9 or int(user_choice) < 1:
+        if int(user_choice) > 9 or int(user_choice) < 1:  # Checks if user input is between 1-9
             raise ValueError("Your number is too high")
     except ValueError as e:
         print(f"Invalid input!! {e}.\n Please input a number between 1-9.")
         return False
+    return True
 
 
-def coordinates():
-    pass
+def coordinates(user_choice):
+    """
+    Changes the users choice into coordinates
+    to allow the programme to check if the space is
+    already taken
+    """
+    row = int(user_choice / 3)
+    column = user_choice
+    if column > 2:
+        column = int(column % 3)
 
 
 def show_on_board():
@@ -69,8 +75,10 @@ def check_diagonal():
 
 
 while True:
+    print_board(board)
     user_choice = input("Enter a position between 1-9 or press 'q' to quit:")
     if quit_game(user_choice):
         print("Thanks for playing")
         break
     validate_input(user_choice)
+    user_choice = int(user_choice) - 1
