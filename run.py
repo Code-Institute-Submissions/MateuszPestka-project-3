@@ -31,9 +31,12 @@ def validate_input(user_choice):
     """
     try:
         if not user_choice.isnumeric():
-            raise ValueError("Please input a number between 1-9")
+            raise ValueError("You have entered a letter")
+
+        if int(user_choice) > 9 or int(user_choice) < 1:
+            raise ValueError("Your number is too high")
     except ValueError as e:
-        print(f"Invalid input {e}. Try Again!")
+        print(f"Invalid input!! {e}.\n Please input a number between 1-9.")
         return False
 
 
