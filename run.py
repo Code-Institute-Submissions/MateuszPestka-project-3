@@ -96,8 +96,21 @@ def win(user, board):
         pass
 
 
-def check_row():
-    pass
+def check_row(user, board):
+    """
+    Checks if a row is complete.
+    If row is NOT complete it returns false and breaks out of the loop
+    If row is complete user wins
+    """
+    for row in board:
+        complete_row = True
+        for slot in row:
+            if slot != user:
+                complete_row = False
+                break
+        if complete_row:
+            return True
+    return False
 
 
 def check_column():
