@@ -44,7 +44,7 @@ def validate_input(user_choice):
 def taken(coords, board):
     row = coords[0]
     column = coords[1]
-    if grid[row][column] != "-":
+    if board[row][column] != "-":
         print("Sorry this position is already taken try again")
         return True
     else:
@@ -94,17 +94,12 @@ while True:
     if quit_game(user_choice):
         print("Thanks for playing")
         break
-    validate_input(user_choice)
+    if validate_input(user_choice):
+        zero_index = int(user_choice) - 1
+        coords = coordinates(zero_index)
+        if taken(coords, board):
+            print("This space is taken. Try again:")
+            continue
+
     #  Allows code to restart when a letter is entered instead of raising a 
     #  Type error which causes the code to crash
-    try:
-        if not user_choice.isnumeric():
-            raise TypeError()
-        else:
-            zero_index = int(user_choice) - 1
-    except TypeError as e:
-        continue
-    coords = coordinates(zero_index)
-    if taken(coords, board):
-        print("This space is taken. Try again:")
-        continue
