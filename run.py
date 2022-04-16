@@ -41,7 +41,7 @@ def validate_input(user_choice):
     return True
 
 
-def taken(coords, grid):
+def taken(coords, board):
     row = coords[0]
     column = coords[1]
     if grid[row][column] != "-":
@@ -105,3 +105,6 @@ while True:
     except TypeError as e:
         continue
     coords = coordinates(zero_index)
+    if taken(coords, board):
+        print("This space is taken. Try again:")
+        continue
