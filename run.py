@@ -62,18 +62,30 @@ def coordinates(zero_index):
 
 
 def show_on_board(coords, board):
+    """
+    Shows the move on the board. X for user and O for computer
+    """
     row = coords[0]
     column = coords[1]
     board[row][column] = "X"
 
 
 def player():
-    pass
+    
 
 
-def win():
-    pass
-
+def win(user, board):
+    """
+    Defines the conditions required to win the game.
+    Three X's or O's in either a horizontal, vertical or 
+    diagonal position.
+    """
+    if check_row():
+        pass
+    if check_column():
+        pass
+    if check_diagonal():
+        pass
 
 def check_row():
     pass
