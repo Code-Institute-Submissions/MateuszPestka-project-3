@@ -2,6 +2,8 @@
 
 board = [["-" for r in range(3)] for c in range(3)]
 
+user = True
+
 
 def print_board(board):
     """
@@ -61,16 +63,19 @@ def coordinates(zero_index):
     return (row, column)
 
 
-def show_on_board(coords, board):
+def show_on_board(coords, board, current_user):
     """
     Shows the move on the board. X for user and O for computer
     """
     row = coords[0]
     column = coords[1]
-    board[row][column] = "X"
+    board[row][column] = current_user
 
 
 def player(user):
+    """
+    Allows switch from X's and O's depending on user
+    """
     if user:
         return "X"
     else:
@@ -89,6 +94,7 @@ def win(user, board):
         pass
     if check_diagonal():
         pass
+
 
 def check_row():
     pass
@@ -117,5 +123,5 @@ while True:
     if taken(coords, board):
         print("This space is taken. Try again:")
         continue
-    show_on_board(coords, board)
+    show_on_board(coords, board, current_user)
     user = not user
