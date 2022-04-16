@@ -88,12 +88,13 @@ def win(user, board):
     Three X's or O's in either a horizontal, vertical or 
     diagonal position.
     """
-    if check_row():
-        pass
-    if check_column():
-        pass
-    if check_diagonal():
-        pass
+    if check_row(user, board):
+        return True
+    if check_column(user, board):
+        return True
+    if check_diagonal(user, board):
+        return True
+    return False
 
 
 def check_row(user, board):
@@ -113,12 +114,20 @@ def check_row(user, board):
     return False
 
 
-def check_column():
-    pass
+def check_column(user, board):
+    for column in range(3):
+        complete_column = True
+        for row in range(3):
+            if slot != user:
+                complete_column = False
+                break
+        if complete_column:
+            return True
+    return False
 
 
-def check_diagonal():
-    pass
+def check_diagonal(user, board):
+    
 
 
 while True:
