@@ -32,6 +32,9 @@ def validate_input(user_choice):
 
         if int(user_choice) > 9 or int(user_choice) < 1:  # Checks if user input is between 1-9
             raise ValueError("Your number is too high")
+        else:
+            user_choice = int(user_choice) - 1
+            return user_choice
     except ValueError as e:
         print(f"Invalid input!! {e}.\n Please input a number between 1-9.")
         return False
@@ -48,14 +51,14 @@ def taken(coords, grid):
         return False
 
 
-def coordinates(user_choice):
+def coordinates(zero_index):
     """
     Changes the users choice into coordinates
     to allow the programme to check if the space is
     already taken
     """
-    row = int(user_choice / 3)
-    column = user_choice
+    row = int(zero_index / 3)
+    column = zero_index
     if column > 2:
         column = int(column % 3)
     return (row, column)
@@ -92,4 +95,13 @@ while True:
         print("Thanks for playing")
         break
     validate_input(user_choice)
-    user_choice = int(user_choice) - 1
+    #  Allows code to restart when a letter is entered instead of raising a 
+    #  Type error which causes the code to crash
+    try:
+        if not user_choice.isnumeric():
+            raise TypeError()
+        else:
+            zero_index = int(user_choice) - 1
+    except TypeError as e:
+        continue
+    coords = coordinates(zero_index)
