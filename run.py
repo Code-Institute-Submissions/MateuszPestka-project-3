@@ -32,9 +32,6 @@ def validate_input(user_choice):
         # Checks if user input is between 1-9
         if int(user_choice) > 9 or int(user_choice) < 1:
             raise ValueError("Your number is too high")
-        else:
-            user_choice = int(user_choice) - 1
-            return user_choice
     except ValueError as e:
         print(f"Invalid input!! {e}.\n Please input a number between 1-9.")
         return False
