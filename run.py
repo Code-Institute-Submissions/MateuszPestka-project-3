@@ -29,8 +29,8 @@ def validate_input(user_choice):
     try:
         if not user_choice.isnumeric():  # Checks if user input a number
             raise ValueError("You have entered a letter")
-
-        if int(user_choice) > 9 or int(user_choice) < 1:  # Checks if user input is between 1-9
+        # Checks if user input is between 1-9
+        if int(user_choice) > 9 or int(user_choice) < 1:
             raise ValueError("Your number is too high")
         else:
             user_choice = int(user_choice) - 1
@@ -64,8 +64,10 @@ def coordinates(zero_index):
     return (row, column)
 
 
-def show_on_board():
-    pass
+def show_on_board(coords, board):
+    row = coords[0]
+    column = coords[1]
+    board[row][column] = "X"
 
 
 def player():
@@ -94,12 +96,12 @@ while True:
     if quit_game(user_choice):
         print("Thanks for playing")
         break
-    if validate_input(user_choice):
-        zero_index = int(user_choice) - 1
-        coords = coordinates(zero_index)
-        if taken(coords, board):
-            print("This space is taken. Try again:")
-            continue
-
-    #  Allows code to restart when a letter is entered instead of raising a 
-    #  Type error which causes the code to crash
+    #  Code continues only if validate_input is true
+    if not validate_input(user_choice):
+        continue
+    zero_index = int(user_choice) - 1
+    coords = coordinates(zero_index)
+    if taken(coords, board):
+        print("This space is taken. Try again:")
+        continue
+    show_on_board(coords, board)
