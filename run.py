@@ -115,10 +115,14 @@ def check_row(user, board):
 
 
 def check_column(user, board):
+    """
+    Check if the user won by filing a column
+    If the user has connects three of his symbols in any direction they win 
+    """
     for column in range(3):
         complete_column = True
         for row in range(3):
-            if slot != user:
+            if board[row][column] != user:
                 complete_column = False
                 break
         if complete_column:
@@ -127,7 +131,16 @@ def check_column(user, board):
 
 
 def check_diagonal(user, board):
-    
+    """
+    Checks if the user won diagonally.
+    There are only two ways the user can win diagonally.
+    """
+    if board[0][0] == user and board[1][1] == user and board[2][2]:
+        return True
+    elif board[0][2] == user and board[1][1] == user and board[2][0]:
+        return True
+    else:
+        return False
 
 
 while True:
