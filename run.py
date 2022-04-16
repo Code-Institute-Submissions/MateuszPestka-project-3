@@ -70,9 +70,12 @@ def show_on_board(coords, board):
     board[row][column] = "X"
 
 
-def player():
+def player(user):
+    if user:
+        return "X"
+    else:
+        return "O"
     
-
 
 def win(user, board):
     """
@@ -100,6 +103,7 @@ def check_diagonal():
 
 
 while True:
+    current_user = player(user)
     print_board(board)
     user_choice = input("Enter a position between 1-9 or press 'q' to quit:")
     if quit_game(user_choice):
@@ -114,3 +118,4 @@ while True:
         print("This space is taken. Try again:")
         continue
     show_on_board(coords, board)
+    user = not user
