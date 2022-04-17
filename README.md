@@ -64,3 +64,27 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
   - The users then have to restart the game from the beginnning.
 
     ![Game is a tie](assets/images/game-tie.PNG)
+
+
+## **Testing**
+
+- ### **Input Testing**
+
+  - I tested all the input possible into the console.
+  - All inputs working as intended without issues
+
+- ### **Error Testing**
+
+  - All error are dealt with correctly
+  - The right error message appears and the game does not stop or crash
+
+- ### **Quit Testing**
+
+  - The quit funtion works as intended.
+  -  Allows the user to quit the game at any moment
+
+- ### **Win/Tie Testing**
+
+  - Both win and tie work as intended showing the right message and ending the game
+  - The board shows the user the outcome of the game
+
