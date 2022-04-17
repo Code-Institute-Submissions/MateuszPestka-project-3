@@ -125,3 +125,27 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 - Validate input function would not work
 
   **Fix**
+  - The validate function returned only True or False
+  - I called the function but didn't put it in an if statement so calling the function was pointless
+
+## **Deployment**
+
+- There was an issue with the deployment of my project.
+- Heroku stopped the authorisation of github due to a security breach.
+- SEE IMAGE:
+
+![Heroku status update](assets/images/Capture.PNG)
+
+-This has stopped me from deploying my project to Heroku.
+
+- They are actively working on a solution but I could not deploy my project as show in the walkthrough project love sandwiches
+- A work around was posted on the project-portfolio-3 on slack yet the work around did not work.
+- I engaged in conversation with several other users and I have followed the steps of the work around yet I receive this error message:
+- When following the work around steps when I try to access my "Deployed project" I get this error:
+
+![Project deploy error](assets/images/error.PNG)
+
+- I have tried all the solutions proposed to me on slack and did research myself yet none if it has allowed me to access my deployed project and produce testing from there.
+
+## **Credits**
+
