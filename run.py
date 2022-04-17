@@ -140,9 +140,9 @@ def check_diagonal(user, board):
     Checks if the user won diagonally.
     There are only two ways the user can win diagonally.
     """
-    if board[0][0] == user and board[1][1] == user and board[2][2]:
+    if board[0][0] == user and board[1][1] == user and board[2][2] == user:
         return True
-    elif board[0][2] == user and board[1][1] == user and board[2][0]:
+    elif board[0][2] == user and board[1][1] == user and board[2][0] == user:
         return True
     else:
         return False
