@@ -1,4 +1,18 @@
-# Tic Tac Toe game
+"""
+Tic Tac Toe game
+
+Creats a board like this:
+[
+  [x, -, -],
+  [-, -, -],
+  [-, -, -]
+]
+User Choeses a number between 1 -9
+Check if the input is valid and on the board raising ValueError
+Show the input on the baord
+Check if the user has won
+Change between users X and O
+"""
 
 board = [["-" for r in range(3)] for c in range(3)]
 
@@ -85,12 +99,12 @@ def player(user):
         return "X"
     else:
         return "O"
-    
+
 
 def win(user, board):
     """
     Defines the conditions required to win the game.
-    Three X's or O's in either a horizontal, vertical or 
+    Three X's or O's in either a horizontal, vertical or
     diagonal position.
     """
     if check_row(user, board):
@@ -122,7 +136,7 @@ def check_row(user, board):
 def check_column(user, board):
     """
     Check if the user won by filing a column
-    If the user has connects three of his symbols in any direction they win 
+    If the user has connects three of his symbols in any direction they win
     """
     for column in range(3):
         complete_column = True
