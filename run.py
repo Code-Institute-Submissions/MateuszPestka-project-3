@@ -41,6 +41,9 @@ def validate_input(user_choice):
 
 
 def taken(coords, board):
+    """
+    Used to check if the slot is already taken by the user or another user
+    """
     row = coords[0]
     column = coords[1]
     if board[row][column] != "-":
