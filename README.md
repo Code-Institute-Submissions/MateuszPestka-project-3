@@ -101,3 +101,27 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 
 ## **Fixed Bugs**
 
+**Bug**
+
+- When input was 1 X or O did not show on board
+  - This bug caused all inputs to work but 1
+
+  **Fix**
+
+  - I fixed this by removing the else from the validate_input function
+
+**Bug**
+
+- User would win when having only two slots on the board
+  - The user would win when they placed their character in slot 1 and 5
+  - This broke the game as they won with only two characters
+
+  **Fix**
+
+  - I added == user to the check_diagonal function in board[2][2] == user
+
+**Bug**
+
+- Validate input function would not work
+
+  **Fix**
