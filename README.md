@@ -88,3 +88,16 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
   - Both win and tie work as intended showing the right message and ending the game
   - The board shows the user the outcome of the game
 
+## **Validator Testing**
+
+  - I have used the PEP8 online test to check my code.
+  - No issues or warnings arose.
+
+    ![PEP8 online test](assets/images/pep8-test.PNG)
+
+## **Unfixed Bugs**
+
+  - No unfixed bugs were found during testing
+
+## **Fixed Bugs**
+
