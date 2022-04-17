@@ -165,7 +165,7 @@ def check_diagonal(user, board):
 while turns < 9:
     current_user = player(user)
     print_board(board)
-    user_choice = input("Enter a position between 1-9 or press 'q' to quit:")
+    user_choice = input("Enter a position between 1-9 or press 'q' to quit:\n")
     if quit_game(user_choice):
         print("Thanks for playing")
         break
