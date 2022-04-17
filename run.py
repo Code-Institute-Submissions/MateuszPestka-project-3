@@ -162,4 +162,8 @@ while True:
         print("This space is taken. Try again:")
         continue
     show_on_board(coords, board, current_user)
+    if win(current_user, board):
+        print_board(board)
+        print(f"Congratulations {current_user} Won!")
+        break
     user = not user
