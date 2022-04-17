@@ -36,7 +36,25 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
   - The user has the ability to stop playing the game at any moment by pressing q
   - This causes the game to break out of the while loop and stop the game
 
-  ![Quit game function](assets/images/quit-game.PNG)
+    ![Quit game function](assets/images/quit-game.PNG)
 
 
+- ### **Correct input recieved**
+
+  - When a correct input has been recieved an X or an O is placed on the board
+  - X takes the first turn and after that its O's turn
+  - The users take turns placing their character on the board
+  - After each turn the character switches
+
+    ![Game in motion](assets/images/game4.PNG)
+
+    ![Game switching between X and O](assets/images/game-switch.PNG)
+
+- ### **User Wins Game**
+
+  - When a user wins the game a congratulations prompt appears and the game loop stops with break.
+  - The prompt tells you whether X's or O's wont the game.
+  - The board is shown to show how the user won the game.
+
+  ![User wins game](assets/images/game5.PNG)
 
