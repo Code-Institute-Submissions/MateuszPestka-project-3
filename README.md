@@ -1,13 +1,13 @@
 # **Tic Tac Toe**
 
-I have decided to make a Tic Tac Toe game as my third project using python. This game allows two users to play a game of Tic Tac Toe agianst each other.
+I have decided to make a Tic Tac Toe game as my third project using python. This game allows two users to play a game of Tic Tac Toe against each other.
 The game is a two player game. A player wins by lining up three X's or three O's in a row either horizontally, diagonally or vertically.
 
 ALL IMAGES WHERE TAKEN FROM THE TERMINAL DUE TO HEROKU GITHUB INTEGRATION BEING DOWN. 
 
 ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 
-## **Feautures of the Game**
+## **Features of the Game**
 
 - ### **Start of Game**
 
@@ -19,7 +19,7 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 - ### **Invalid Input Handling**
 
   - When a user inputs a letter the code raises a ValueError
-  - This explains that the user has input a letter and prompts the user once agian to enter a number between 1-9
+  - This explains that the user has input a letter and prompts the user once again to enter a number between 1-9
 
     ![Letter has been entered](assets/images/game2.PNG)
 
@@ -80,8 +80,8 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 
 - ### **Quit Testing**
 
-  - The quit funtion works as intended.
-  -  Allows the user to quit the game at any moment
+  - The quit function works as intended.
+  - Allows the user to quit the game at any moment
 
 - ### **Win/Tie Testing**
 
@@ -147,5 +147,13 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 
 - I have tried all the solutions proposed to me on slack and did research myself yet none if it has allowed me to access my deployed project and produce testing from there.
 
-## **Credits**
+## **Credits/Resources**
 
+- I have used the website called [Data Flair](https://data-flair.training/blogs/python-exception-handling/) to clarify exception handling and help me write Error exceptions
+
+- I got the idea from this video on the [website](https://www.techwithtim.net/tutorials/python-programming/tic-tac-toe-tutorial/) and took inspiration for the check_diagonal function form the isWinner function from the website.
+- I did not take any other code from the website apart from the check_diagonal function which I followed similar logic for. I have changed the function to suit the needs of my code.
+
+- I had trouble with nested loops and this website clarified it: [stackoverflow](https://stackoverflow.com/questions/52640648/python-nested-loops-printed-seats)
+
+- Code was tested on [PEP8](http://pep8online.com/)
