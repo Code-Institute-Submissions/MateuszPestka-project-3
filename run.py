@@ -2,7 +2,9 @@
 
 board = [["-" for r in range(3)] for c in range(3)]
 
-user = True
+user = True  # When user is true X when false O
+
+turns = 0
 
 
 def print_board(board):
@@ -146,7 +148,7 @@ def check_diagonal(user, board):
         return False
 
 
-while True:
+while turns < 9:
     current_user = player(user)
     print_board(board)
     user_choice = input("Enter a position between 1-9 or press 'q' to quit:")
@@ -166,4 +168,8 @@ while True:
         print_board(board)
         print(f"Congratulations {current_user} Won!")
         break
+
+    turns += 1
+    if turns == 9:
+        print("Its a tie! Try a rematch!")
     user = not user
