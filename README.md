@@ -1,31 +1,23 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Tic Tac Toe**
 
-Welcome MateuszPestka,
+I have decided to make a Tic Tac Toe game as my third project using python. This game allows two users to play a game of Tic Tac Toe agianst each other.
+The game is a two player game. A player wins by lining up three X's or three O's in a row either horizontally, diagonally or vertically.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+ALL IMAGES WHERE TAKEN FROM THE TERMINAL DUE TO HEROKU GITHUB INTEGRATION BEING DOWN. 
 
-## Reminders
+ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION
+STUDENT SUPPORT HAS BEEN CONTACTED
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## **Feautures of the Game**
 
-## Creating the Heroku app
+- **Start of Game**
+  - The game begins by asking the user to input a number between 1-9.
+  - This prompts the user to make their first move.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Beginning of game](assets/images/game1.PNG)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- **Invalid Input Handling**
+  - When a user inputs a letter the code raises a ValueError
+  - This explains that the user has input a letter and prompts the user once agian to enter a number between 1-9
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+![Letter has been entered](assets/images/game2.PNG)
