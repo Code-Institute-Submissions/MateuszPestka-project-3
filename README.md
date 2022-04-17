@@ -58,3 +58,9 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 
   ![User wins game](assets/images/game5.PNG)
 
+- ### **The Game is a Tie**
+
+  -  When the game is a tie the game ends with a prompt that the game is a tie.
+  - The users then have to restart the game from the beginnning.
+
+    ![Game is a tie](assets/images/game-tie.PNG)
