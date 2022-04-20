@@ -5,7 +5,10 @@ The game is a two player game. A player wins by lining up three X's or three O's
 
 ALL IMAGES WHERE TAKEN FROM THE TERMINAL DUE TO HEROKU GITHUB INTEGRATION BEING DOWN. 
 
-ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
+~~ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED~~
+**ISSUE FIXED**
+
+Link to deployed website: [Tic Tac Toe](https://project-3-tic-tac-toe.herokuapp.com/)
 
 ## **Features of the Game**
 
@@ -146,6 +149,12 @@ ERROR EXPLAINED BELOW IN DEPLOYMENT SECTION. STUDENT SUPPORT HAS BEEN CONTACTED
 ![Project deploy error](assets/images/error.PNG)
 
 - I have tried all the solutions proposed to me on slack and did research myself yet none if it has allowed me to access my deployed project and produce testing from there.
+
+### **ERROR FIXED**
+- The Error has been fixed and been deployed through CLI in github.
+- I used CLI commands heroku login -i
+- Then created an app in heroku with heroku create your_app_name_here 
+- Then pushed the code to deploy the website with git push heroku main
 
 ## **Credits/Resources**
 
